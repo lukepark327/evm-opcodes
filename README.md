@@ -17,16 +17,16 @@ An asterisk means dynamic gas cost.
 | --- | --- | --- | --- | --- | --- |
 | `0x00` | STOP | Halts execution | - | 0 |
 | `0x01` | ADD | Addition operation | - | 3 | [#opAdd](https://github.com/twodude/evm-opcodes#opadd) | 
-| `0x02` | MUL | Multiplication operation | - | 5 |
-| `0x03` | SUB | Subtraction operation | - | 3 |
-| `0x04` | DIV | Integer division operation | - | 5 |
-| `0x05` | SDIV | Signed integer division operation (truncated) | - | 5 |
-| `0x06` | MOD | Modulo remainder operation | - | 5 |
-| `0x07` | SMOD | Signed modulo remainder operation | - | 5 |
+| `0x02` | MUL | Multiplication operation | - | 5 | [#opMul](https://github.com/twodude/evm-opcodes#opmul) |
+| `0x03` | SUB | Subtraction operation | - | 3 | [#opSub](https://github.com/twodude/evm-opcodes#opsub) |
+| `0x04` | DIV | Integer division operation | - | 5 | [#opDiv](https://github.com/twodude/evm-opcodes#opdiv) |
+| `0x05` | SDIV | Signed integer division operation | - | 5 | [#opSdiv](https://github.com/twodude/evm-opcodes#opsdiv) |
+| `0x06` | MOD | Modulo remainder operation | - | 5 | [#opMod](https://github.com/twodude/evm-opcodes#opmod) |
+| `0x07` | SMOD | Signed modulo remainder operation | - | 5 | [#opSmod](https://github.com/twodude/evm-opcodes#opsmod) |
 | `0x08` | ADDMOD | Modulo addition operation | - | 8 |
 | `0x09` | MULMOD | Modulo multiplication operation | - | 8 |
-| `0x0a` | EXP | Exponential operation | - | * |
-| `0x0b` | SIGNEXTEND | Extend length of two's complement signed integer | - | 5 |
+| `0x0a` | EXP | Exponential operation | - | * | [#opExp](https://github.com/twodude/evm-opcodes#opexp) |
+| `0x0b` | SIGNEXTEND | Extend length of signed integer | - | 5 | [#opSingExtend](https://github.com/twodude/evm-opcodes#opsignextend) |
 | `0x0c` - `0x0f` | Unused | - |
 | `0x10` | LT | Less-than comparison | - | 3 |
 | `0x11` | GT | Greater-than comparison | - | 3 |
