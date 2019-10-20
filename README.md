@@ -1,6 +1,6 @@
 # Ethereum opcodes and instructions
 
-This reference [jump_table.go](https://github.com/ethereum/go-ethereum/core/vm/jump_table.go), [instructions.go](https://github.com/ethereum/go-ethereum/core/vm/instructions.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum) and [Instruction.h](https://github.com/ethereum/solidity/blob/7709ece95f922a813477e668f7acd867e909b10f/libevmasm/Instruction.h) from [solidity](https://github.com/ethereum/solidity).
+This reference [jump_table.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/jump_table.go), [instructions.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/instructions.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum) and [Instruction.h](https://github.com/ethereum/solidity/blob/7709ece95f922a813477e668f7acd867e909b10f/libevmasm/Instruction.h) from [solidity](https://github.com/ethereum/solidity).
 
 # Table
 
