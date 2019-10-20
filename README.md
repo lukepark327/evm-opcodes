@@ -191,6 +191,66 @@ BenchmarkOpAdd64-12 | 10000000 | 136 ns/op | 112 B/op | 3 allocs/op
 BenchmarkOpAdd128-12 | 10000000 | 144 ns/op | 112 B/op | 3 allocs/op
 BenchmarkOpAdd256-12 | 10000000 | 202 ns/op | 192 B/op | 4 allocs/op
 
+## opMul
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpMul-12 | 5000000 | 336 ns/op | 288 B/op | 5 allocs/op
+
+## opSub
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpSub64-12 | 10000000 | 179 ns/op | 160 B/op | 4 allocs/op
+BenchmarkOpSub128-12 | 10000000 | 210 ns/op | 160 B/op | 4 allocs/op
+BenchmarkOpSub256-12 | 5000000 | 270 ns/op | 192 B/op | 4 allocs/op
+
+## opDiv
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpDiv64-12 | 10000000 | 194 ns/op | 160 B/op | 4 allocs/op
+BenchmarkOpDiv128-12 | 10000000 | 238 ns/op | 160 B/op | 4 allocs/op
+BenchmarkOpDiv256-12 | 3000000 | 466 ns/op | 320 B/op | 6 allocs/op
+
+## opSdiv
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpSdiv-12 | 2000000 | 607 ns/op | 416 B/op | 8 allocs/op
+
+## opMod
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpMod-12 | 3000000 | 409 ns/op | 320 B/op | 6 allocs/op
+
+## opSmod
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpSmod-12 | 2000000 | 648 ns/op | 464 B/op | 9 allocs/op
+
+## opAddmod
+
+TBA
+
+## opMulmod
+
+TBA
+
+## opExp
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpExp-12 | 100000 | 23486 ns/op | 18416 B/op | 195 allocs/op
+
+## opSignExtend
+
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpSignExtend-12 | 5000000 | 295 ns/op | 272 B/op | 6 allocs/op
+
 # License
 
 The evm-opcodes project is licensed under the [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0), also included in our repository in the [LICENSE](https://github.com/twodude/evm-opcodes/blob/master/LICENSE) file.
