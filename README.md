@@ -1,8 +1,17 @@
 # Ethereum opcodes and instructions
 
-This reference [jump_table.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/jump_table.go), [instructions.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/instructions.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum) and [Instruction.h](https://github.com/ethereum/solidity/blob/7709ece95f922a813477e668f7acd867e909b10f/libevmasm/Instruction.h) from [solidity](https://github.com/ethereum/solidity).
+This references [jump_table.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/jump_table.go), [instructions.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/instructions.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum) and [Instruction.h](https://github.com/ethereum/solidity/blob/7709ece95f922a813477e668f7acd867e909b10f/libevmasm/Instruction.h) from [solidity](https://github.com/ethereum/solidity).
+
+# System environment
+MacBook Pro (15-inch, 2018)
+- OS: macOS Catalina (Version 10.15)
+- Processor: 2.2GHz 6-Core intel Core i7
+- Memory: 16GB 2400MHz DDR4
+- Graphics: Radeon Pro 560X 4GB
 
 # Table
+
+An asterisk means dynamic gas cost.
 
 | Opcode | Name | Description | Extra Info | Gas | Evaluation |
 | --- | --- | --- | --- | --- | --- |
@@ -16,9 +25,11 @@ This reference [jump_table.go](https://github.com/ethereum/go-ethereum/tree/mast
 | `0x07` | SMOD | Signed modulo remainder operation | - | 5 |
 | `0x08` | ADDMOD | Modulo addition operation | - | 8 |
 | `0x09` | MULMOD | Modulo multiplication operation | - | 8 |
-| `0x0a` | EXP | Exponential operation | - | 10* |
+| `0x0a` | EXP | Exponential operation | - | * |
 | `0x0b` | SIGNEXTEND | Extend length of two's complement signed integer | - | 5 |
-| `0x0c` - `0x0f` | Unused | Unused | - |
+
+| Opcode | Name | Description | Extra Info | Gas | Evaluation |
+| --- | --- | --- | --- | --- | --- |
 | `0x10` | LT | Less-than comparison | - | 3 |
 | `0x11` | GT | Greater-than comparison | - | 3 |
 | `0x12` | SLT | Signed less-than comparison | - | 3 |
@@ -30,8 +41,19 @@ This reference [jump_table.go](https://github.com/ethereum/go-ethereum/tree/mast
 | `0x18` | XOR | Bitwise XOR operation | - | 3 |
 | `0x19` | NOT | Bitwise NOT operation | - | 3 |
 | `0x1a` | BYTE | Retrieve single byte from word | - | 3 |
-| `0x20` | SHA3 | Compute Keccak-256 hash | - | 30* |
-| `0x21` - `0x2f`| Unused | Unused |
+| `0x1b` | SHL | Bitwise SHL operation | - | 3 |
+| `0x1c` | SHR | Bitwise SHL operation | - | 3 |
+| `0x1d` | SAR | Bitwise SHL operation | - | 3 |
+
+| Opcode | Name | Description | Extra Info | Gas | Evaluation |
+| --- | --- | --- | --- | --- | --- |
+| `0x20` | KECCAK256 | Compute KECCAK-256 hash | - | * |
+
+
+
+
+| Opcode | Name | Description | Extra Info | Gas | Evaluation |
+| --- | --- | --- | --- | --- | --- |
 | `0x30` | ADDRESS | Get address of currently executing account | - | 2 |
 | `0x31` | BALANCE | Get balance of the given account | - | 400 |
 | `0x32` | ORIGIN | Get execution origination address | - | 2 |
@@ -165,6 +187,13 @@ This reference [jump_table.go](https://github.com/ethereum/go-ethereum/tree/mast
 | `0xfd` | REVERT | Stop execution and revert state changes, without consuming all provided gas and providing a reason | - | 0 |
 | `0xfe` | INVALID | Designated invalid instruction | - | 0 |
 | `0xff` | SELFDESTRUCT | Halt execution and register account for later deletion | - | 5000* | 
+
+# Evaluate
+
+## opAdd
+
+
+
 
 # License
 
