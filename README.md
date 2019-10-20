@@ -165,3 +165,7 @@ This reference [jump_table.go](https://github.com/ethereum/go-ethereum/core/vm/j
 | `0xfd` | REVERT | Stop execution and revert state changes, without consuming all provided gas and providing a reason | - | 0 |
 | `0xfe` | INVALID | Designated invalid instruction | - | 0 |
 | `0xff` | SELFDESTRUCT | Halt execution and register account for later deletion | - | 5000* | 
+
+# License
+
+The evm-opcodes project is licensed under the [Apache License, Version 2.0](https://opensource.org/licenses/Apache-2.0), also included in our repository in the [LICENSE](https://github.com/twodude/evm-opcodes/blob/master/LICENSE) file.
