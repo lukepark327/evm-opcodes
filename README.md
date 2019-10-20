@@ -1,6 +1,6 @@
 # Ethereum opcodes and instructions
 
-This references [jump_table.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/jump_table.go), [instructions.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/instructions.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum) and [Instruction.h](https://github.com/ethereum/solidity/blob/7709ece95f922a813477e668f7acd867e909b10f/libevmasm/Instruction.h) from [solidity](https://github.com/ethereum/solidity).
+This refers to [jump_table.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/jump_table.go), [instructions.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/instructions.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum) and [Instruction.h](https://github.com/ethereum/solidity/blob/7709ece95f922a813477e668f7acd867e909b10f/libevmasm/Instruction.h) from the [solidity](https://github.com/ethereum/solidity).
 
 # System environment
 MacBook Pro (15-inch, 2018)
@@ -27,9 +27,6 @@ An asterisk means dynamic gas cost.
 | `0x09` | MULMOD | Modulo multiplication operation | - | 8 |
 | `0x0a` | EXP | Exponential operation | - | * |
 | `0x0b` | SIGNEXTEND | Extend length of two's complement signed integer | - | 5 |
-
-| Opcode | Name | Description | Extra Info | Gas | Evaluation |
-| --- | --- | --- | --- | --- | --- |
 | `0x10` | LT | Less-than comparison | - | 3 |
 | `0x11` | GT | Greater-than comparison | - | 3 |
 | `0x12` | SLT | Signed less-than comparison | - | 3 |
@@ -44,16 +41,7 @@ An asterisk means dynamic gas cost.
 | `0x1b` | SHL | Bitwise SHL operation | - | 3 |
 | `0x1c` | SHR | Bitwise SHL operation | - | 3 |
 | `0x1d` | SAR | Bitwise SHL operation | - | 3 |
-
-| Opcode | Name | Description | Extra Info | Gas | Evaluation |
-| --- | --- | --- | --- | --- | --- |
 | `0x20` | KECCAK256 | Compute KECCAK-256 hash | - | * |
-
-
-
-
-| Opcode | Name | Description | Extra Info | Gas | Evaluation |
-| --- | --- | --- | --- | --- | --- |
 | `0x30` | ADDRESS | Get address of currently executing account | - | 2 |
 | `0x31` | BALANCE | Get balance of the given account | - | 400 |
 | `0x32` | ORIGIN | Get execution origination address | - | 2 |
@@ -190,10 +178,15 @@ An asterisk means dynamic gas cost.
 
 # Evaluate
 
+Using Benchmark tool in golang. This refers to [instructions_test.go](https://github.com/ethereum/go-ethereum/tree/master/core/vm/instructions_test.go) from the [go-ethereum](https://github.com/ethereum/go-ethereum)
+
 ## opAdd
 
-
-
+| Benchmark | Loops | Time | Bytes | Allocations |
+| --- | --- | --- | --- | --- |
+BenchmarkOpAdd64-12 | 10000000 | 136 ns/op | 112 B/op | 3 allocs/op
+BenchmarkOpAdd128-12 | 10000000 | 144 ns/op | 112 B/op | 3 allocs/op
+BenchmarkOpAdd256-12 | 10000000 | 202 ns/op | 192 B/op | 4 allocs/op
 
 # License
 
