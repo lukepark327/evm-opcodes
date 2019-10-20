@@ -16,7 +16,7 @@ An asterisk means dynamic gas cost.
 | Opcode | Name | Description | Extra Info | Gas | Evaluation |
 | --- | --- | --- | --- | --- | --- |
 | `0x00` | STOP | Halts execution | - | 0 |
-| `0x01` | ADD | Addition operation | - | 3 |
+| `0x01` | ADD | Addition operation | - | 3 | [#opAdd](https://github.com/twodude/evm-opcodes#opadd) | 
 | `0x02` | MUL | Multiplication operation | - | 5 |
 | `0x03` | SUB | Subtraction operation | - | 3 |
 | `0x04` | DIV | Integer division operation | - | 5 |
@@ -27,6 +27,7 @@ An asterisk means dynamic gas cost.
 | `0x09` | MULMOD | Modulo multiplication operation | - | 8 |
 | `0x0a` | EXP | Exponential operation | - | * |
 | `0x0b` | SIGNEXTEND | Extend length of two's complement signed integer | - | 5 |
+| `0x0c` - `0x0f` | Unused | - |
 | `0x10` | LT | Less-than comparison | - | 3 |
 | `0x11` | GT | Greater-than comparison | - | 3 |
 | `0x12` | SLT | Signed less-than comparison | - | 3 |
@@ -41,7 +42,9 @@ An asterisk means dynamic gas cost.
 | `0x1b` | SHL | Bitwise SHL operation | - | 3 |
 | `0x1c` | SHR | Bitwise SHL operation | - | 3 |
 | `0x1d` | SAR | Bitwise SHL operation | - | 3 |
+| `0x1e` - `0x1f` | Unused | - |
 | `0x20` | KECCAK256 | Compute KECCAK-256 hash | - | * |
+| `0x21` - `0x2f` | Unused | - |
 | `0x30` | ADDRESS | Get address of currently executing account | - | 2 |
 | `0x31` | BALANCE | Get balance of the given account | - | 400 |
 | `0x32` | ORIGIN | Get execution origination address | - | 2 |
